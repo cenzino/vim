@@ -48,6 +48,18 @@ set backspace=eol,start,indent
 set whichwrap+=h,l,<,>,[,]
 set showcmd                         " Mostra i commandi durante la pressione
 set showmatch                       " Evidenzia la parentesi corrispondente
+set showmode
+
+" Remember cursor position
+au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g`\"" | endif
+
+" Disable the stupid pydoc preview window for the omni completion
+set completeopt-=preview
+
+" Disable the blinking cursor.
+set gcr=a:blinkon0
+
+set ttyfast
 
 " Ricerca
 set ignorecase
@@ -73,6 +85,17 @@ set autoindent
 set smartindent
 set wrap
 
+" Make the command line two lines high and change the statusline display to
+" something that looks useful.
+set cmdheight=2
+set laststatus=2
+"set statusline=[%l,%v\ %P%M][CWD:\ %{CWD()}][FILE:\ %f]\ %r%h%w\ (%{&ff})\ %{fugitive#statusline()}\ 
+
+function! CWD()
+    let curdir = substitute(getcwd(), '/home/mnazim', "~/", "g")
+    return curdir
+endfunction
+
 " =================================
 " Folding
 " =================================
@@ -89,12 +112,27 @@ set foldopen=block,hor,mark,percent,quickfix,tag        " what movements open fo
 " =================================
 " GUI
 " =================================
+set t_Co=256
+
 if has("gui_running")
 	set guioptions-=T
-	"set t_Co=256
 	set guifont=Consolas\ 10 " Font
+    "set background=dark
+    "colorscheme desert    
+    let g:solarized_contrast="high"    "default value is normal
+    let g:solarized_visibility="high"    "default value is normal
     set background=dark
-    colorscheme desert    
+    colorscheme solarized
+
+    " let g:solarized_termtrans=0
+    " let g:solarized_termcolors=16
+else
+    "set background=dark
+    "colorscheme solarized
+    let g:solarized_termtrans=1
+    let g:solarized_termcolors=256
+    set background=dark
+    colorscheme solarized
 endif
 
 " =================================
