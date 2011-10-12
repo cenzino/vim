@@ -139,10 +139,15 @@ endif
 " Plugin
 " =================================
 
+" CommandT
+noremap <leader>o <Esc>:CommandT<CR>
+noremap <leader>O <Esc>:CommandTFlush<CR>
+noremap <leader>m <Esc>:CommandTBuffer<CR>
 
 " =================================
 " Settings linguaggi
 " =================================
 
 " Markdown
-"autocmd BufNewFile,BufRead *.txt,*.markdown,*.md setlocal ft=markdown
+autocmd BufNewFile,BufRead *.txt,*.markdown,*.md setlocal ft=mkd
+
