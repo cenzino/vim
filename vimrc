@@ -151,3 +151,5 @@ noremap <leader>m <Esc>:CommandTBuffer<CR>
 " Markdown
 autocmd BufNewFile,BufRead *.txt,*.markdown,*.md setlocal ft=mkd
 
+" NERDTree
+map <F2> :NERDTreeToggle<CR>
