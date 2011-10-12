@@ -143,3 +143,6 @@ endif
 " =================================
 " Settings linguaggi
 " =================================
+
+" Markdown
+"autocmd BufNewFile,BufRead *.txt,*.markdown,*.md setlocal ft=markdown
