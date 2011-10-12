@@ -153,3 +153,10 @@ autocmd BufNewFile,BufRead *.txt,*.markdown,*.md setlocal ft=mkd
 
 " NERDTree
 map <F2> :NERDTreeToggle<CR>
+
+" MiniBufExpl
+let g:miniBufExplMapWindowNavVim = 1 
+let g:miniBufExplMapWindowNavArrows = 1 
+let g:miniBufExplMapCTabSwitchBufs = 1 
+let g:miniBufExplModSelTarget = 1 
+
