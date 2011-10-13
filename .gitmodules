@@ -16,3 +16,6 @@
 [submodule "bundle/minibufexpl"]
 	path = bundle/minibufexpl
 	url = https://github.com/fholgado/minibufexpl.vim.git
+[submodule "bundle/delimitmate"]
+	path = bundle/delimitmate
+	url = https://github.com/Raimondi/delimitMate.git
