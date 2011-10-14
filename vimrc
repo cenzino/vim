@@ -117,18 +117,11 @@ set t_Co=256
 if has("gui_running")
 	set guioptions-=T
 	set guifont=Consolas\ 10 " Font
-    "set background=dark
-    "colorscheme desert    
     let g:solarized_contrast="high"    "default value is normal
     let g:solarized_visibility="high"    "default value is normal
     set background=dark
     colorscheme solarized
-
-    " let g:solarized_termtrans=0
-    " let g:solarized_termcolors=16
 else
-    "set background=dark
-    "colorscheme solarized
     let g:solarized_termtrans=1
     let g:solarized_termcolors=256
     set background=dark
@@ -160,3 +153,6 @@ let g:miniBufExplMapWindowNavArrows = 1
 let g:miniBufExplMapCTabSwitchBufs = 1 
 let g:miniBufExplModSelTarget = 1 
 
+" TagBar
+let g:tagbar_usearrows = 1
+nnoremap <leader>l :TagbarToggle<CR>
