@@ -137,13 +137,6 @@ noremap <leader>o <Esc>:CommandT<CR>
 noremap <leader>O <Esc>:CommandTFlush<CR>
 noremap <leader>m <Esc>:CommandTBuffer<CR>
 
-" =================================
-" Settings linguaggi
-" =================================
-
-" Markdown
-autocmd BufNewFile,BufRead *.txt,*.markdown,*.md setlocal ft=mkd
-
 " NERDTree
 map <F2> :NERDTreeToggle<CR>
 
@@ -168,15 +161,24 @@ let g:indent_guides_enable_on_vim_startup = 1
 let g:indent_guides_start_level = 2
 let g:indent_guides_guide_size = 1
 
-"inoremap <expr> <CR> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
-"inoremap <expr> <C-n> pumvisible() ? '<C-n>' :
-"  \ '<C-n><C-r>=pumvisible() ? "\<lt>Down>" : ""<CR>'
+" Syntastic
+let g:syntastic_enable_signs=1
+let g:syntastic_auto_loclist=1
+let g:syntastic_quiet_warnings=0
 
-"inoremap <expr> <M-,> pumvisible() ? '<C-n>' :
-"  \ '<C-x><C-o><C-n><C-p><C-r>=pumvisible() ? "\<lt>Down>" : ""<CR>'
+" =================================
+" Settings linguaggi
+" =================================
 
-" ----------
-"imap <silent> <buffer> . .<C-X><C-O>
-"imap <silent> <expr> <buffer> <CR> pumvisible() ? "<CR><C-R>=(col('.')-1&&match(getline(line('.')), '\\.',
-"      \ col('.')-2) == col('.')-2)?\"\<lt>C-X>\<lt>C-O>\":\"\"<CR>"
-"      \ : "<CR>"
+" Markdown
+autocmd BufNewFile,BufRead *.txt,*.markdown,*.md setlocal ft=mkd
+
+" ---------------------------------------------------------------------
+
+set completeopt=longest,menuone
+" inoremap <Nul> <C-x><C-o>
+
+autocmd FileType python set omnifunc=pythoncomplete#Complete
+autocmd FileType javascript set omnifunc=javascriptcomplete#CompleteJS
+autocmd FileType html set omnifunc=htmlcomplete#CompleteTags
+autocmd FileType css set omnifunc=csscomplete#CompleteCSS
