@@ -118,7 +118,7 @@ set t_Co=256
 
 if has("gui_running")
 	set guioptions-=T
-	set guifont=Consolas\ 10 " Font
+	set guifont=Monaco\ 10 " Font
     let g:solarized_contrast="high"    "default value is normal
     let g:solarized_visibility="high"    "default value is normal
     set background=dark
@@ -173,6 +173,9 @@ let g:syntastic_quiet_warnings=0
 
 " LustyJuggler
 nmap <silent> <Leader>b :LustyJuggler<CR>
+
+" Sparkup
+let g:sparkupNextMapping = '<c-x>'
 
 " =================================
 " Settings linguaggi
