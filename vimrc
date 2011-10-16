@@ -14,6 +14,7 @@ syntax on
 
 filetype plugin on
 filetype indent on
+set mouse=a
 
 " ==================================
 " Generale
@@ -125,8 +126,11 @@ if has("gui_running")
 else
     let g:solarized_termtrans=1
     let g:solarized_termcolors=256
+    "colorscheme solarized
     set background=dark
-    colorscheme solarized
+    "colorscheme molokai 
+    colorscheme mustang2
+    "set background=dark
 endif
 
 " =================================
@@ -142,10 +146,10 @@ noremap <leader>m <Esc>:CommandTBuffer<CR>
 map <F2> :NERDTreeToggle<CR>
 
 " MiniBufExpl
-let g:miniBufExplMapWindowNavVim = 1 
-let g:miniBufExplMapWindowNavArrows = 1 
-let g:miniBufExplMapCTabSwitchBufs = 1 
-let g:miniBufExplModSelTarget = 1 
+" let g:miniBufExplMapWindowNavVim = 1 
+"let g:miniBufExplMapWindowNavArrows = 1 
+"let g:miniBufExplMapCTabSwitchBufs = 1 
+"let g:miniBufExplModSelTarget = 1 
 
 " TagBar
 let g:tagbar_usearrows = 1
