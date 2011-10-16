@@ -173,6 +173,11 @@ let g:syntastic_quiet_warnings=0
 " Markdown
 autocmd BufNewFile,BufRead *.txt,*.markdown,*.md setlocal ft=mkd
 
+" Django
+autocmd FileType python set ft=python.django " For SnipMate
+autocmd FileType html set ft=htmldjango.html " For SnipMate
+
+
 " ---------------------------------------------------------------------
 
 set completeopt=longest,menuone
