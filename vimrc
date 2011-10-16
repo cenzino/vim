@@ -49,6 +49,7 @@ set whichwrap+=h,l,<,>,[,]
 set showcmd                         " Mostra i commandi durante la pressione
 set showmatch                       " Evidenzia la parentesi corrispondente
 set showmode
+set hidden
 
 " Remember cursor position
 au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g`\"" | endif
@@ -148,7 +149,7 @@ let g:miniBufExplModSelTarget = 1
 
 " TagBar
 let g:tagbar_usearrows = 1
-nnoremap <leader>l :TagbarToggle<CR>
+nnoremap <leader>i :TagbarToggle<CR>
 
 """"""""""""""""""""""
 set ofu=syntaxcomplete#Complete
@@ -165,6 +166,9 @@ let g:indent_guides_guide_size = 1
 let g:syntastic_enable_signs=1
 let g:syntastic_auto_loclist=1
 let g:syntastic_quiet_warnings=0
+
+" LustyJuggler
+nmap <silent> <Leader>b :LustyJuggler<CR>
 
 " =================================
 " Settings linguaggi
