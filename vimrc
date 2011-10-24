@@ -194,19 +194,8 @@ autocmd FileType html set ft=htmldjango.html " For SnipMate
 set completeopt=longest,menuone
 " inoremap <Nul> <C-x><C-o>
 
-"autocmd FileType python set omnifunc=pythoncomplete#Complete
+autocmd FileType python set omnifunc=pythoncomplete#Complete
 autocmd FileType javascript set omnifunc=javascriptcomplete#CompleteJS
 autocmd FileType html set omnifunc=htmlcomplete#CompleteTags
 autocmd FileType css set omnifunc=csscomplete#CompleteCSS
 
-"autocmd FileType python setlocal omnifunc=pysmell#Complete
-
-python << EOF
-import os
-import sys
-import vim
-
-sys.path.append("/usr/local/lib/python2.6/dist-packages")
-EOF
-exe ":source ~/.vim/bundle/pysmell/plugin/pysmell.vim"
-autocmd FileType python set omnifunc=pysmell#Complete
