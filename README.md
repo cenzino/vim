@@ -18,3 +18,9 @@ TagBar
 
     :::bash
     $ sudo apt-get install exuberant-ctags
+
+PyFlakes
+
+    :::bash
+    $ cd ~/.vim/bundle/pyflakes
+    $ git sudbmodule update --init
